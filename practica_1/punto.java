@@ -6,10 +6,10 @@ public class punto{
         this.x=x;
         this.y=y;
     }
-public float[] cartesianas(){
+public float[] coor_cartesianas(){
     return new float[] {x , y} ;
 }
-public double[] polares(){
+public double[] coor_polares(){
     double r = Math.sqrt(x * x + y * y);
     double alpha = Math.atan2(y, x);
     return new double[] {r,alpha};   
@@ -21,18 +21,15 @@ public static void main(String[] args) {
     punto p1=new punto(3, 4);
 
     System.out.println("Coordenadas cartesianas:");
-    float [] cartesianas = p1.cartesianas();
-    System.out.println("(" + cartesianas[0] + ", " + cartesianas[1] + ")");
+    float [] coor_cartesianas = p1.coor_cartesianas();
+    System.out.println("(" + coor_cartesianas[0] + ", " + coor_cartesianas[1] + ")");
 
     System.out.println("Coordenadas polares:");
-    double [] polares =p1.polares();
-    System.out.println("(" + polares[0] + ", " + polares[1] + ")");
+    double [] coor_polares =p1.coor_polares();
+    System.out.println("(" + coor_polares[0] + ", " + coor_polares[1] + ")");
 
     System.out.println("toString:");
     System.out.println(p1);
 
 }
-
-
-
 }
