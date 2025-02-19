@@ -4,9 +4,9 @@ import java.awt.*;
 
 class Circulo {
     private final Point centro;
-    private final int radio;
+    private final float radio;
 
-    public Circulo(Point centro, int radio) {
+    public Circulo(Point centro, float radio) {
         this.centro = centro;
         this.radio = radio;
     }
@@ -34,10 +34,11 @@ class Circulo {
                 g.drawLine(0, centerY, width, centerY);
 
                 g.setColor(Color.BLACK);
-                int scale = 50;
-                int x = centerX + centro.x * scale;
-                int y = centerY - centro.y * scale;
-                g.drawOval(x - radio * scale, y - radio * scale, 2 * radio * scale, 2 * radio * scale);
+                float scale = 50;
+                int x = Math.round(centerX + centro.x * scale);
+                int y = Math.round(centerY - centro.y * scale);
+                int diameter = Math.round(2 * radio * scale);
+                g.drawOval(x - diameter / 2, y - diameter / 2, diameter, diameter);
             }
         });
         frame.setVisible(true);
