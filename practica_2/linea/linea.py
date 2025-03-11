@@ -28,7 +28,7 @@ class Linea:
         pen.penup()
         turtle.done() 
 
-l1 = Linea((3, 0), (4, 4))
+l1 = Linea((0, 0), (5, 5))
 
 print("toString:")
 print(l1)

@@ -1,4 +1,4 @@
-package prog_II.practica_2.circulo;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -34,7 +34,7 @@ class Circulo {
                 g.drawLine(0, centerY, width, centerY);
 
                 g.setColor(Color.BLACK);
-                float scale = 50;
+                float scale = 10;
                 int x = Math.round(centerX + centro.x * scale);
                 int y = Math.round(centerY - centro.y * scale);
                 int diameter = Math.round(2 * radio * scale);
@@ -47,7 +47,7 @@ class Circulo {
 
 public class Main {
     public static void main(String[] args) {
-        Circulo c1 = new Circulo(new Point(0, 0), 2);
+        Circulo c1 = new Circulo(new Point(0, 0), 5);
         System.out.println("toString:");
         System.out.println(c1);
         c1.dibujaCirculo();

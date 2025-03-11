@@ -25,7 +25,7 @@ class Circulo:
         pen.circle(self.radio, steps=100)
         turtle.done()  
 
-c1 = Circulo((0, 0), 4)
+c1 = Circulo((0, 0), 5)
 print("toString:")
 print(c1)
 c1.dibujaCirculo()
