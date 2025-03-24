@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 class Cola {
     private int n;
     private int[] arreglo;

@@ -1,4 +1,4 @@
-package prog_II.practica_2.linea;
+package practica_2.linea;
 import javax.swing.*;
 import java.awt.*;
 
