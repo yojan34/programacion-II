@@ -1,14 +1,10 @@
 package practica_5.estadistica.poo;
-
 import java.util.Scanner;
-
 class Estadistica {
     private double[] numeros;
-
     public Estadistica(double[] numeros) {
         this.numeros = numeros;
     }
-
     public double calcularPromedio() {
         double suma = 0;
         for (double num : numeros) {
@@ -16,7 +12,6 @@ class Estadistica {
         }
         return suma / numeros.length;
     }
-
     public double calcularDesviacion() {
         double promedio = calcularPromedio();
         double suma = 0;
@@ -25,9 +20,6 @@ class Estadistica {
         }
         return Math.sqrt(suma / (numeros.length - 1));
     }
-
-
-
     public class Main {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);

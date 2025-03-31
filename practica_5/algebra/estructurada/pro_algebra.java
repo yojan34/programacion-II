@@ -15,7 +15,7 @@ public class pro_algebra {
     public static void main(String[] args) {
         double a = 1;
         double b = 2;
-        double c = 1;
+        double c = 3;
 
         double discriminante = getDiscriminante(a, b, c);
         if (discriminante < 0) {
