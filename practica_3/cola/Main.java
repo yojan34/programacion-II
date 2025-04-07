@@ -69,7 +69,7 @@ public class Main {
     static boolean[] primo = new boolean[num];
 
     public static void criba() {
-        Arrays.fill(primo, true);
+        Arrays.fill(primo,true);
         for (int i = 2; i * i < num; i++) {
             if (primo[i]) {
                 for (int j = i * i; j < num; j += i) {
