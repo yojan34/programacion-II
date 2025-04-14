@@ -3,23 +3,17 @@ import java.util.Random;
 import java.util.Scanner;
 public class JuegoAdivinaNumero extends juego{
     private int numeroAAdivinar;
-
     public JuegoAdivinaNumero(int numeroDeVidas) {
-        super(numeroDeVidas);
-        }
-    
+        super(numeroDeVidas);}
     public boolean validaNumero( int numero) {
-        return numero >= 0 && numero <= 10;
-    }
+        return numero >= 0 && numero <= 10;}
     public void juega() {
         reiniciaPartida();
         numeroAAdivinar= new Random().nextInt(11);
         Scanner scanner = new Scanner(System.in);
-
         while (true) {
             System.out.print("Adivina el número (0-10): ");
             int intento = scanner.nextInt();
-
             if (intento == numeroAAdivinar) {
                 System.out.println("¡Acertaste!");
                 actualizaRecord();
