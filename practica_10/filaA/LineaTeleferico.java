@@ -1,5 +1,4 @@
 package practica_10.filaA;
-
 public class LineaTeleferico {
     String color;
     String tramo;
@@ -8,21 +7,18 @@ public class LineaTeleferico {
     String[][] empleados = new String[100][3]; // [nombre, apellido1, apellido2]
     int[] edades = new int[100];
     double[] sueldos = new double[100];
-
     public LineaTeleferico() {
         this.color = "";
         this.tramo = "";
         this.nroCabinas = 0;
         this.nroEmpleados = 0;
     }
-
     public LineaTeleferico(String color, String tramo, int nroCabinas) {
         this.color = color;
         this.tramo = tramo;
         this.nroCabinas = nroCabinas;
         this.nroEmpleados = 0;
     }
-
     public void agregarEmpleado(String nombre, String ape1, String ape2, int edad, double sueldo) {
         empleados[nroEmpleados][0] = nombre;
         empleados[nroEmpleados][1] = ape1;
@@ -31,7 +27,6 @@ public class LineaTeleferico {
         sueldos[nroEmpleados] = sueldo;
         nroEmpleados++;
     }
-
     public void eliminarPorApellido(String apellido) {
         for (int i = 0; i < nroEmpleados; i++) {
             if (empleados[i][1].equals(apellido) || empleados[i][2].equals(apellido)) {
@@ -63,7 +58,6 @@ public class LineaTeleferico {
             nroEmpleados--;
         }
     }
-
     public void mostrarMayorEdad() {
         if (nroEmpleados == 0) return;
         int mayor = edades[0];
@@ -75,7 +69,6 @@ public class LineaTeleferico {
             if (edades[i] == mayor) mostrarEmpleado(i);
         }
     }
-
     public void mostrarMayorSueldo() {
         if (nroEmpleados == 0) return;
         double mayor = sueldos[0];

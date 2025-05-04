@@ -1,0 +1,11 @@
++-----------------------------------+        +-----------------------------+        +-----------------------------+
+|              Planta               |        |     CondicionAmbiental      |        |      BarreraGeografica      |
++-----------------------------------+        +-----------------------------+        +-----------------------------+
+| - nombreCientifico: String        |        | - tipoClima: String         |        | - tipo: String              |
+| - tipoSemilla: String             |        | - tipoSuelo: String         |        | - nombre: String            |
+| - regionDistribucion: String      |        | - temperaturaMedia: double  |        | - ubicacion: String         |
+| - familia: String                 |        | - precipitacionAnual: double|        | - extensionKm: double       |
++-----------------------------------+        +-----------------------------+        +-----------------------------+
+| +adaptarseAlClima(String)         |        | +esAptoPara(Planta)         |        | +restringeDispersion(Planta)|
+| +compararRelacionEvolutiva(Planta)|        !+calcularIndiceDeIdoneidad() |        | +obtenerDificultadDePaso()  |
++-----------------------------------+        +-----------------------------+        +-----------------------------+

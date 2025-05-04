@@ -1,0 +1,13 @@
++--------------------------+        +------------------------+        +-------------------------------+
+|    ComunidadIndigena     |        |     EmpresaMinera      |        |           Gobierno            |
++--------------------------+        +------------------------+        +-------------------------------+
+| - nombre: String         |        | - nombre: String       |        | - presidente: String          |
+| - departamento: String   |        | - zonaOperacion: String|        | - ministerio: String          |
+| - nivelContaminacion:    |        | - cantidadConcesiones: |        | - presupuestoAmbiental: double|
+|   String                 |        |   int                  |        | - respuestasEmitidas: int     |
+| - metalesDetectados:     |        | - fondoCompensacion:   |        +-------------------------------+
+|   List<String>           |        |   double               |        | +emitirRespuesta()            |
++--------------------------+        +------------------------+        | +aumentarPresupuesto()        |
+| +denunciarContaminacion()|        | +calcularCompensacion()|        +-------------------------------+
+| +agregarMetalDetectado() |        | +reducirConcesiones()  |
++--------------------------+        +------------------------+

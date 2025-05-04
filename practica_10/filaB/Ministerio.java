@@ -1,28 +1,21 @@
 package practica_10.filaB;
-
 public class Ministerio {
     String nombre;
     String direccion;
     int nroEmpleados;
-    String[][] empleados = new String[100][3]; // [fila][columna] -> [empleado][nombre, apellido1, apellido2]
+    String[][] empleados = new String[100][3]; 
     int[] edades = new int[100];
     double[] sueldos = new double[100];
-
-    // Constructor por defecto
     public Ministerio() {
         this.nombre = "";
         this.direccion = "";
         this.nroEmpleados = 0;
     }
-
-    // Constructor con parámetros
     public Ministerio(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.nroEmpleados = 0;
     }
-
-    // Método para agregar empleados
     public void agregarEmpleado(String nombre, String ape1, String ape2, int edad, double sueldo) {
         empleados[nroEmpleados][0] = nombre;
         empleados[nroEmpleados][1] = ape1;
@@ -31,8 +24,6 @@ public class Ministerio {
         sueldos[nroEmpleados] = sueldo;
         nroEmpleados++;
     }
-
-    // b) Eliminar empleados con edad X
     public void eliminarPorEdad(int x) {
         for (int i = 0; i < nroEmpleados; i++) {
             if (edades[i] == x) {
@@ -44,17 +35,13 @@ public class Ministerio {
                     sueldos[j] = sueldos[j + 1];
                 }
                 nroEmpleados--;
-                i--; // revisar posición nueva
+                i--;
             }
         }
     }
-
-    // c) Transferir empleado con índice X a otro ministerio
     public void transferirEmpleadoA(Ministerio destino, int x) {
         if (x >= 0 && x < nroEmpleados) {
             destino.agregarEmpleado(empleados[x][0], empleados[x][1], empleados[x][2], edades[x], sueldos[x]);
-
-            // Eliminar del actual
             for (int j = x; j < nroEmpleados - 1; j++) {
                 empleados[j][0] = empleados[j + 1][0];
                 empleados[j][1] = empleados[j + 1][1];
@@ -65,8 +52,6 @@ public class Ministerio {
             nroEmpleados--;
         }
     }
-
-    // d.1) Mostrar empleados con menor edad
     public void mostrarMenorEdad() {
         if (nroEmpleados == 0) return;
         int menor = edades[0];
@@ -80,8 +65,6 @@ public class Ministerio {
             }
         }
     }
-
-    // d.2) Mostrar empleados con menor sueldo
     public void mostrarMenorSueldo() {
         if (nroEmpleados == 0) return;
         double menor = sueldos[0];
@@ -95,14 +78,10 @@ public class Ministerio {
             }
         }
     }
-
-    // Mostrar un solo empleado
     public void mostrarEmpleado(int i) {
         System.out.println("- " + empleados[i][0] + " " + empleados[i][1] + " " + empleados[i][2]
                 + " | Edad: " + edades[i] + " | Sueldo: " + sueldos[i]);
     }
-
-    // Mostrar todos los empleados
     public void mostrarTodos() {
         System.out.println("\nMinisterio: " + nombre);
         for (int i = 0; i < nroEmpleados; i++) {

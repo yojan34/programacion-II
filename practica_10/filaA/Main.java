@@ -12,21 +12,17 @@ public class Main {
         rojo.agregarEmpleado("Lucy", "Sosa", "Rios", 43, 3250);
         rojo.agregarEmpleado("Ana", "Perez", "Rojas", 26, 2700);
         rojo.agregarEmpleado("Saul", "Arce", "Calle", 29, 2500);
-
         // Mostrar empleados
         rojo.mostrarTodos();
-
         // b) Eliminar por apellido
         rojo.eliminarPorApellido("Rojas");
         System.out.println("\nDespués de eliminar apellido:");
         rojo.mostrarTodos();
-
         // c) Transferir empleado 1 a otra línea
         rojo.transferirA(azul, 1);
         System.out.println("\nDespués de transferir a línea Azul:");
         rojo.mostrarTodos();
         azul.mostrarTodos();
-
         // d) Mayor edad y mayor sueldo
         System.out.println("\nMayor edad en línea Roja:");
         rojo.mostrarMayorEdad();
